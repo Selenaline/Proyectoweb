@@ -1,0 +1,123 @@
+body {
+    background-image: url('amor.jpg'); /* Nombre de tu imagen */
+    background-size: cover;                /* Cubre toda la pantalla */
+    background-position: center;           /* Centra la imagen */
+    background-attachment: fixed;         /* El fondo se queda quieto al hacer scroll */
+    background-repeat: no-repeat;          /* No permite que la imagen se repita como mosaico */
+    margin: 0;
+    font-family: 'Arial', sans-serif;      /* Un tipo de letra más limpio */
+}
+
+/* Encabezado */
+header {
+  background-color: #d9c2a3;
+  text-align: center;
+  padding: 2rem;
+  border-bottom: 4px solid #b89b72;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #3e2f1c;
+}
+
+header p {
+  font-style: italic;
+  color: #5a4632;
+}
+
+/* Sección de paquetes con Flexbox */
+#paquetes {
+  padding: 2rem;
+}
+
+.contenedor-paquetes {
+  display: flex;
+  flex-wrap: wrap; /* permite que los paquetes salten a nuevas filas */
+  justify-content: center; /* centra horizontalmente */
+  gap: 2rem; /* espacio entre tarjetas */
+}
+
+.paquete {
+  flex: 1 1 280px; /* ancho mínimo de 280px, se ajusta automáticamente */
+  max-width: 320px;
+  background-color: #fffaf3;
+  border: 1px solid #d3bfa6;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(75, 59, 42, 0.2);
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.paquete:hover {
+  transform: scale(1.03);
+}
+
+.paquete h3 {
+  color: #7a5c3e;
+  margin-top: 0;
+}
+
+.paquete ul {
+  list-style-type: square;
+  padding-left: 1.2rem;
+}
+
+.paquete p {
+  font-weight: bold;
+  color: #a0522d;
+}
+
+/* Formulario */
+#contacto {
+  background-color: #f2e6d9;
+  padding: 2rem;
+  border-top: 4px solid #b89b72;
+}
+
+#contacto h2 {
+  text-align: center;
+  color: #4b3b2a;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+input, textarea, button {
+  margin-top: 0.5rem;
+  padding: 0.8rem;
+  border: 1px solid #b89b72;
+  border-radius: 5px;
+  font-family: 'Georgia', serif;
+}
+
+button {
+  background-color: #d9c2a3;
+  color: #3e2f1c;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #b89b72;
+}
+
+/* Pie */
+footer {
+  text-align: center;
+  background-color: #d9c2a3;
+  padding: 1rem;
+  color: #3e2f1c;
+  border-top: 4px solid #b89b72;
+}
