@@ -2,7 +2,7 @@ body {
     background-image: url('amor.jpg'); /* Nombre de tu imagen */
     background-size: cover;                /* Cubre toda la pantalla */
     background-position: center;           /* Centra la imagen */
-    background-attachment: fixed;         /* El fondo se queda quieto al hacer scroll */
+    background-attachment: fixed;          /* El fondo se queda quieto al hacer scroll */
     background-repeat: no-repeat;          /* No permite que la imagen se repita como mosaico */
     margin: 0;
     font-family: 'Arial', sans-serif;      /* Un tipo de letra más limpio */
@@ -12,42 +12,64 @@ body {
 header {
   background-color: #d9c2a3;
   text-align: center;
-  padding: 2rem;
+  padding: 3rem 2rem; 
   border-bottom: 4px solid #b89b72;
 }
 
 header h1 {
-  font-size: 2.5rem;
-  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 0 10px 0;
   color: #3e2f1c;
 }
 
 header p {
-  font-style: italic;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.8rem;
+  margin: 0;
   color: #5a4632;
 }
 
-/* Sección de paquetes con Flexbox */
+/* Sección de paquetes */
 #paquetes {
   padding: 2rem;
+  margin-top: 20px; /* Ajustado para que el título respire */
+  margin-bottom: 50px;
+}
+
+#paquetes h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;      
+  text-align: left;     
+  color: #080113dc;         
+  margin-left: 20px;
+  margin-bottom: 20px;    
+  font-weight: 700;       
+  letter-spacing: 2px;    
 }
 
 .contenedor-paquetes {
-  display: flex;
-  flex-wrap: wrap; /* permite que los paquetes salten a nuevas filas */
-  justify-content: center; /* centra horizontalmente */
-  gap: 2rem; /* espacio entre tarjetas */
+  display: flex; 
+  justify-content: center; 
+  gap: 20px; 
+  padding: 20px; 
+  flex-wrap: wrap; /* Para que se acomoden en celular */
 }
 
 .paquete {
-  flex: 1 1 280px; /* ancho mínimo de 280px, se ajusta automáticamente */
+  flex: 1 1 280px;
   max-width: 320px;
   background-color: #fffaf3;
   border: 1px solid #d3bfa6;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(75, 59, 42, 0.2);
-  padding: 1.5rem;
+  padding: 1.5rem; 
   transition: transform 0.2s ease;
+  min-height: 300px; 
+  display: flex;
+  flex-direction: column;
 }
 
 .paquete:hover {
@@ -61,63 +83,73 @@ header p {
 
 .paquete ul {
   list-style-type: square;
-  padding-left: 1.2rem;
+  padding-left: 1.0rem;
+  flex-grow: 1; /* Empuja el contenido hacia abajo */
 }
 
 .paquete p {
   font-weight: bold;
   color: #a0522d;
+  margin-bottom: 10px;
 }
 
-/* Formulario */
-#contacto {
-  background-color: #f2e6d9;
-  padding: 2rem;
-  border-top: 4px solid #b89b72;
-}
-
-#contacto h2 {
-  text-align: center;
-  color: #4b3b2a;
-}
-
-form {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  margin-top: 1rem;
-  font-weight: bold;
-}
-
-input, textarea, button {
-  margin-top: 0.5rem;
-  padding: 0.8rem;
-  border: 1px solid #b89b72;
+/* BOTÓN DE SELECCIÓN (Nuevo) */
+.btn-seleccionar {
+  background-color: #3e2f1c;
+  color: #fffaf3;
+  border: none;
+  padding: 12px;
   border-radius: 5px;
-  font-family: 'Georgia', serif;
-}
-
-button {
-  background-color: #d9c2a3;
-  color: #3e2f1c;
-  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
-button:hover {
+.btn-seleccionar:hover {
   background-color: #b89b72;
 }
 
-/* Pie */
+/* ESTILOS DEL FORMULARIO (Nuevo) */
+#seccion-formulario {
+  transition: all 0.5s ease;
+}
+
+#form-contacto input, 
+#form-contacto textarea {
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  outline: none;
+}
+
+#form-contacto input:focus, 
+#form-contacto textarea:focus {
+  border-color: #3e2f1c;
+  box-shadow: 0 0 5px rgba(62, 47, 28, 0.3);
+}
+
+/* Sección Quiénes Somos */
+#sobre-nosotras {
+  padding: 2rem;
+  color: #3e2f1c;
+}
+
+#sobre-nosotras h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+}
+
+.contenedor-nosotras p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Pie de página */
 footer {
   text-align: center;
   background-color: #d9c2a3;
-  padding: 1rem;
+  padding: 2rem; 
   color: #3e2f1c;
   border-top: 4px solid #b89b72;
 }
